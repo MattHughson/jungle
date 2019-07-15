@@ -132,5 +132,13 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+Product.all.each do |product|
+  5.times do
+    # creating a review associated with a product
+    product.reviews.create!(
+      rating: rand(5) + 1, 
+      description: Faker::Hipster.paragraph(4))
+  end
+end
 
 puts "DONE!"

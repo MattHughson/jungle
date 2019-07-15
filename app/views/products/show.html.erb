@@ -23,9 +23,41 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+              <h3>Add a Review</h3>
+
+    <%= form_for [@product, @review] do |f| %>
+
+      <% if @review.errors.any? %>
+        <div id="error_explanation" class='well'>
+
+          <ul>
+            <% @review.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+      <% end %>
+
+
+
+      <div class="form-group">
+        <%= f.label :rating %>
+        <%= f.text_field :rating %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :comment %>
+        <%= f.text_field :description %>
+      </div>
+
+      <%= f.submit 'Add Review' %>
+
+    <% end  %>
       </div>
     </div>
-
+<h3>Reviews</h3>
+             <ul>  
+             <%= render partial: 'products/review', collection: @product.reviews.order(created_at: :desc) %>
+             </ul>
   </article>
 
 </section>

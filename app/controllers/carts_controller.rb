@@ -1,6 +1,9 @@
 class CartsController < ApplicationController
 
   def show
+    # if cart_subtotal_cents = 0
+      # redirect_to cart, flash: { "Please add to cart" }
+    # end
   end
 
   def add_item
