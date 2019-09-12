@@ -3,7 +3,7 @@
 A mini e-commerce application built with Rails 4.2. The application was existing and features were added and bugs fixed.
 
 ## Video
-<img src="./docs/purchase_summary.png" width="800">
+<img src="ezgif.com-video-to-gif.gif" width="800">
 
 
 ## Getting Started
