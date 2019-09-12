@@ -1,28 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2. The application was existing and features were added and bugs fixed.
+
+## Video
+<img src="./docs/purchase_summary.png" width="800">
 
 
-## Setup
-
-1. Fork & Clone
-2. Run `bundle install` to install dependencies
-3. Create `config/database.yml` by copying `config/database.example.yml`
-4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-5. Run `bin/rake db:reset` to create, load and seed db
-6. Create .env file based on .env.example
-7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
-
-## Stripe Testing
-
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
-More information in their docs: <https://stripe.com/docs/testing#cards>
-
-## Dependencies
-
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
+## Getting Started
+- clone repository to your local machine
+- in terminal, navigate to project directory and run ```bundle install```
+- create a ```.env``` file as per ```.env.example```
+- create a ```database.yml``` file as per ```database.example.yml```
+- create a  ```secrets.example.yml``` file as per ```secrets.example.yml```
+- Sign up for a [Stripe](https://stripe.com/) account
+- copy Stripe keys into .env file
+- type ```rails db:reset``` in terminal to re-seed the database and create the tables
+- type ```bin/rails s -b 0.0.0.0``` in terminal to start the server
+- navigate to ```localhost:3000``` in your browser
+- use credit card number ```4111 1111 1111 1111``` and any date in the future for the credentials
